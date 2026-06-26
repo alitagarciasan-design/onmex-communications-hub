@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONMEX Communications Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <span class="badge">ONMEX Universidad</span>
+      <h1>Communications Hub</h1>
+      <p>Centraliza mensajes, campañas, onboarding y seguimiento académico en un solo lugar.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Crear mensaje</h2>
+
+      <div class="form-grid">
+        <label>
+          Nombre del alumno
+          <input id="studentName" type="text" placeholder="Ej. María" />
+        </label>
+
+        <label>
+          Tipo de comunicación
+          <select id="messageType">
+            <option value="onboarding">Plática de bienvenida</option>
+            <option value="test">Test de habilidades</option>
+            <option value="actividad">Actividad pendiente</option>
+            <option value="seguimiento">Seguimiento académico</option>
+          </select>
+        </label>
+
+        <label>
+          Link
+          <input id="link" type="url" placeholder="https://..." />
+        </label>
+
+        <label>
+          Hora / fecha
+          <input id="schedule" type="text" placeholder="Ej. hoy a las 7:00 pm" />
+        </label>
+      </div>
+
+      <button id="generateBtn">Generar mensaje</button>
+    </section>
+
+    <section class="panel output-panel">
+      <div class="panel-header">
+        <h2>Mensaje generado</h2>
+        <button id="copyBtn" class="secondary">Copiar</button>
+      </div>
+
+      <textarea id="output" readonly placeholder="Aquí aparecerá el mensaje..."></textarea>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Onboarding</h3>
+        <p>Impulsa la asistencia a pláticas de bienvenida y explica el uso de plataformas.</p>
+      </article>
+
+      <article class="card">
+        <h3>Test de habilidades</h3>
+        <p>Refuerza la importancia de completar el diagnóstico inicial.</p>
+      </article>
+
+      <article class="card">
+        <h3>Seguimiento</h3>
+        <p>Facilita campañas de contacto claras, cálidas y orientadas a la acción.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>ONMEX Communications Hub · Herramienta interna de comunicación académica</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
